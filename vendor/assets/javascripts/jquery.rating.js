@@ -97,7 +97,7 @@
 				
 				// Create 'cancel' button
 				rater.append(
-					control.cancel = $('<div class="rating-cancel"><a title="' + control.cancel + '">' + control.cancelValue + '</a></div>')
+					control.cancel = $('<div class="rating-cancel d-none"><a title="' + control.cancel + '">' + control.cancelValue + '</a></div>')
 					.on('mouseover',function(){
 						$(this).rating('drain');
 						$(this).addClass('star-rating-hover');
@@ -117,7 +117,7 @@
 			}; // first element of group
 			
 			// insert rating star (thanks Jan Fanslau rev125 for blind support https://code.google.com/p/jquery-star-rating-plugin/issues/detail?id=125)
-			var star = $('<div role="text" aria-label="'+ this.title +'" class="star-rating rater-'+ control.serial +'"><a title="' + (this.title || this.value) + '">' + this.value + '</a></div>');
+			var star = $('<div role="text" aria-label="'+ this.title +'" class="star-rating rater-'+ control.serial +'"><a title="' + (this.title || this.value) + '"><i class="fas fa-star"></i></a></div>');
 			rater.append(star);
 			
 			// inherit attributes from input element
